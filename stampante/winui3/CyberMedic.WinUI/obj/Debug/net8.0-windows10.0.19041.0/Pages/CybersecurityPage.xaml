@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="CyberMedic.WinUI.Pages.CybersecurityPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ScrollViewer>
+        <StackPanel Padding="24" Spacing="16" Background="{StaticResource BackgroundBrush}">
+            <TextBlock Text="Cybersecurity" Style="{StaticResource TitleTextBlockStyle}" Foreground="{StaticResource AccentBrush}" />
+            <TextBlock Text="Diagnostica di sicurezza e scansione nmap." Foreground="{StaticResource SecondaryTextBrush}" TextWrapping="Wrap" />
+
+            <StackPanel Orientation="Horizontal" Spacing="8">
+                <Button x:ConnectionId='3' Content="Verifica Firewall"                              Background="{StaticResource AccentBrush}" Foreground="White" />
+                <Button x:ConnectionId='4' Content="Scansione Porte"                              Background="{StaticResource AccentBrush}" Foreground="White" />
+                <Button x:ConnectionId='5' Content="Verifica Defender"                              Background="{StaticResource AccentBrush}" Foreground="White" />
+            </StackPanel>
+
+            <Border Background="{StaticResource CardBrush}" CornerRadius="8" Padding="16">
+                <TextBox x:ConnectionId='2' x:Name="OutputBox" IsReadOnly="True" TextWrapping="Wrap" Height="300" Background="{StaticResource SurfaceBrush}" Foreground="{StaticResource TextBrush}" FontFamily="Consolas" />
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+

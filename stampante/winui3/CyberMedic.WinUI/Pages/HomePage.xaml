@@ -1,0 +1,30 @@
+<Page
+    x:Class="CyberMedic.WinUI.Pages.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ScrollViewer>
+        <StackPanel Padding="24" Spacing="16" Background="{StaticResource BackgroundBrush}">
+            <TextBlock Text="CyberMedic - Home / Dashboard" Style="{StaticResource TitleTextBlockStyle}" Foreground="{StaticResource AccentBrush}" />
+            <TextBlock Text="Informazioni di sistema, licenze e stato generale." Foreground="{StaticResource SecondaryTextBrush}" TextWrapping="Wrap" />
+
+            <Border Background="{StaticResource CardBrush}" CornerRadius="8" Padding="16">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Sistema" FontWeight="Bold" Foreground="{StaticResource AccentBrush}" />
+                    <TextBlock x:Name="OsInfoText" Foreground="{StaticResource TextBrush}" />
+                    <TextBlock x:Name="CpuInfoText" Foreground="{StaticResource TextBrush}" />
+                    <TextBlock x:Name="RamInfoText" Foreground="{StaticResource TextBrush}" />
+                </StackPanel>
+            </Border>
+
+            <Border Background="{StaticResource CardBrush}" CornerRadius="8" Padding="16">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Licenze Office" FontWeight="Bold" Foreground="{StaticResource AccentBrush}" />
+                    <TextBlock x:Name="OfficeInfoText" Foreground="{StaticResource TextBrush}" TextWrapping="Wrap" />
+                </StackPanel>
+            </Border>
+
+            <Button Content="Aggiorna" Click="RefreshButton_Click" Background="{StaticResource AccentBrush}" Foreground="White" />
+            <TextBox x:Name="OutputBox" IsReadOnly="True" TextWrapping="Wrap" Height="200" Background="{StaticResource SurfaceBrush}" Foreground="{StaticResource TextBrush}" />
+        </StackPanel>
+    </ScrollViewer>
+</Page>

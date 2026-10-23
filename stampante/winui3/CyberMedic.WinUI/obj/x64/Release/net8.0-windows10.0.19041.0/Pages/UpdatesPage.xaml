@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="CyberMedic.WinUI.Pages.UpdatesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ScrollViewer>
+        <StackPanel Padding="24" Spacing="16" Background="{StaticResource BackgroundBrush}">
+            <TextBlock Text="Updates" Style="{StaticResource TitleTextBlockStyle}" Foreground="{StaticResource AccentBrush}" />
+            <TextBlock Text="Aggiornamenti Winget e driver." Foreground="{StaticResource SecondaryTextBrush}" TextWrapping="Wrap" />
+
+            <StackPanel Orientation="Horizontal" Spacing="8">
+                <Button x:ConnectionId='3' Content="Verifica Aggiornamenti"                                  Background="{StaticResource AccentBrush}" Foreground="White" />
+                <Button x:ConnectionId='4' Content="Aggiorna Driver"                                   Background="{StaticResource AccentBrush}" Foreground="White" />
+            </StackPanel>
+
+            <Border Background="{StaticResource CardBrush}" CornerRadius="8" Padding="16">
+                <TextBox x:ConnectionId='2' x:Name="OutputBox" IsReadOnly="True" TextWrapping="Wrap" Height="300" Background="{StaticResource SurfaceBrush}" Foreground="{StaticResource TextBrush}" FontFamily="Consolas" />
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+

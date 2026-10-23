@@ -1,0 +1,24 @@
+# Log generati dal tool
+logs/
+*.log
+
+# Report diagnostici e registri esportati
+diagnostica-stampanti-*.txt
+registro-*.txt
+
+# Cache e file temporanei
+*.tmp
+*.bak
+~$*
+
+# Editor e IDE
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
