@@ -1,0 +1,27 @@
+<Window
+    x:Class="CyberMedic.WinUI.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="CyberMedic">
+
+    <NavigationView x:Name="NavView"
+                   PaneDisplayMode="Left"
+                   IsBackButtonVisible="Collapsed"
+                   SelectionChanged="NavView_SelectionChanged"
+                   Background="{StaticResource SurfaceBrush}">
+        <NavigationView.MenuItems>
+            <NavigationViewItem Content="Home / Dashboard" Tag="Home" />
+            <NavigationViewItem Content="Gestione Stampanti" Tag="Printers" />
+            <NavigationViewItem Content="Network &amp; Rete" Tag="Network" />
+            <NavigationViewItem Content="Task Manager" Tag="TaskManager" />
+            <NavigationViewItem Content="Updates" Tag="Updates" />
+            <NavigationViewItem Content="Maintenance" Tag="Maintenance" />
+            <NavigationViewItem Content="Mail &amp; PowerShell" Tag="Mail" />
+            <NavigationViewItem Content="Cybersecurity" Tag="Cybersecurity" />
+        </NavigationView.MenuItems>
+        <Frame x:Name="ContentFrame" Background="{StaticResource BackgroundBrush}" />
+    </NavigationView>
+</Window>
